@@ -1,0 +1,149 @@
+{
+	"type": "Collection",
+	"properties": {
+		"appId": {
+			"name": "appId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "appId",
+			"order": 0
+		},
+		"salutation": {
+			"name": "salutation",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "salutation",
+			"order": 1
+		},
+		"firstName": {
+			"name": "firstName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "firstName",
+			"order": 2
+		},
+		"lastName": {
+			"name": "lastName",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "lastName",
+			"order": 3
+		},
+		"martialStatus": {
+			"name": "martialStatus",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "martialStatus",
+			"order": 4
+		},
+		"spouce": {
+			"name": "spouce",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "spouce",
+			"order": 5
+		},
+		"work": {
+			"name": "work",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "work",
+			"order": 6
+		},
+		"fax": {
+			"name": "fax",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "fax",
+			"order": 7
+		},
+		"cell": {
+			"name": "cell",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "cell",
+			"order": 8
+		},
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "email",
+			"order": 9
+		},
+		"contactMethod": {
+			"name": "contactMethod",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "contactMethod",
+			"order": 10
+		},
+		"home": {
+			"name": "home",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "home",
+			"order": 11
+		},
+		"dependants": {
+			"name": "dependants",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "dependants",
+			"order": 12
+		},
+		"language": {
+			"name": "language",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "language",
+			"order": 13
+		},
+		"existingClient": {
+			"name": "existingClient",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "existingClient",
+			"order": 14
+		},
+		"clientId": {
+			"name": "clientId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "clientId",
+			"order": 15
+		},
+		"firstTimeBuyer": {
+			"name": "firstTimeBuyer",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": false,
+			"id": "firstTimeBuyer",
+			"order": 16
+		},
+		"relationWithPrimary": {
+			"name": "relationWithPrimary",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "relationWithPrimary",
+			"order": 17
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"type": "Collection",
+	"properties": {
+		"type": {
+			"name": "type",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "type",
+			"order": 0
+		},
+		"purpose": {
+			"name": "purpose",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "purpose",
+			"order": 1
+		},
+		"agent": {
+			"name": "agent",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "agent",
+			"order": 2
+		}
+	}
+}
