@@ -1,0 +1,178 @@
+<div id="createEditApplication">
+    <div class="col-sm-12 header">
+        <h1>Add Applicant to <a href="#/apps/{{appId}}">{{ appId }}</a></h1>
+    </div>
+    <form class="form-horizontal" name="createEditForm" novalidate ng-submit="addEditApplicant(formData)">
+
+        <div class="col-sm-6">
+
+            <div class="form-group">
+                <label for="appId" class="col-sm-4 control-label">Application Id</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.appId" disabled class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="salutation" class="col-sm-4 control-label">Salutation</label>
+                <div class="col-sm-8">
+                    <select class="form-control widthAuto" ng-model="formData.salutation">
+                        <option selected="" value="Dr">Dr.</option>
+                        <option value="Ms">Ms.</option>
+                        <option value="Mrs">Mrs.</option>
+                        <option value="Mr">Mr.</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-4 control-label">First Name</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.firstName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-4 control-label">Last Name</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.lastName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob" class="col-sm-4 control-label">Date of birth</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.dob" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="martialStatus" class="col-sm-4 control-label">Martial Status</label>
+                <div class="col-sm-8">
+                    <select class="form-control widthAuto" ng-model="formData.martialStatus">
+                        <option value="Married">Married</option>
+                        <option value="Single">Single</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="spouce" class="col-sm-4 control-label">Spouce Name</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.spouce" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-4 control-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.email" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="work" class="col-sm-4 control-label">Work Phone</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.work" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="col-sm-4 control-label">Cell Phone</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.mobile" class="form-control">
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+
+            <div class="form-group">
+                <label for="dependants" class="col-sm-4 control-label">Dependants</label>
+                <div class="col-sm-8">
+                    <select class="form-control widthAuto" ng-model="formData.dependants">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="language" class="col-sm-4 control-label">Language</label>
+                <div class="col-sm-8">
+                    <select class="form-control widthAuto" ng-model="formData.language">
+                        <option value="english">English</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="kannada">Kannada</option>
+                        <option value="telgu">Telgu</option>
+                        <option value="tamil">Tamil</option>
+                        <option value="panjabi">Panjabi</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="existingClient" class="col-sm-4 control-label">Existing Client</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="formData.existingClient">
+                        <option value="apple">Apple</option>
+                        <option value="mssb">MSSB</option>
+                        <option value="amazon">Amazon</option>
+                        <option value="Golman">Goldman</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="clientId" class="col-sm-4 control-label">Client Id</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" ng-model="formData.clientId">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="relationWithPrimary" class="col-sm-4 control-label">Relationship with primary applicant</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="formData.relationWithPrimary">
+                        <option value="husband">Husband</option>
+                        <option value="wife">Wife</option>
+                        <option value="son">Son</option>
+                        <option value="daughter">Daughter</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="home" class="col-sm-4 control-label">Home Phone</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.home" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fax" class="col-sm-4 control-label">Fax</label>
+                <div class="col-sm-8">
+                    <input type="text" ng-model="formData.fax" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contactMethod" class="col-sm-4 control-label">Contact Method</label>
+                <div class="col-sm-8">
+                    <select class="form-control" ng-model="formData.contactMethod">
+                        <option value="mail">Mail</option>
+                        <option value="phone">Phone</option>
+                        <option value="fax">Fax</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-offset-4 col-sm-8">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="formData.firstTimeBuyer"> First Time Buyer
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center clearfix col-sm-12 mTop">
+            <button type="submit" class="btn btn-primary">Add Applicant</button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,45 @@
+<div id="viewApp">
+    <div class="col-sm-12">
+        <div class="header">
+            <h1>{{ app.id }}</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <strong>Application Id</strong>
+            </div>
+            <div class="col-sm-8">
+                <p>{{ app.id }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <strong>Application Type</strong>
+            </div>
+            <div class="col-sm-8">
+                <p>{{ app.type }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <strong>Purpose</strong>
+            </div>
+            <div class="col-sm-8">
+                <p>{{ app.purpose }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <strong>Agent</strong>
+            </div>
+            <div class="col-sm-8">
+                <p>{{ app.agent }}</p>
+            </div>
+        </div>
+        <div class="row mTop">
+            <div class="col-sm-6">
+                <a class="btn btn-primary" href="#/apps/{{app.id}}/add">Add Applicant</a>
+                <a class="btn btn-link" ui-sref="listapp">Show All Application</a>
+            </div>
+        </div>
+    </div>
+</div>

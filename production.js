@@ -12,6 +12,11 @@ var server = deployd({
       password: '123'
     }
   }
+  // db: {
+  //   host: 'localhost',
+  //   port: 27017, 
+  //   name: 'test'
+  // }
 });
 
 server.listen();

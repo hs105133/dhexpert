@@ -1,0 +1,39 @@
+<div id="createEditApplication">
+    <div class="col-sm-12">
+        <div class="header">
+            <h1>Applicants</h1>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Application ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Date of birth</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="applicant in applicants">
+                        <td>{{ applicant.appId }}</td>
+                        <td>{{ applicant.firstName }}</td>
+                        <td>{{ applicant.email }}</td>
+                        <td>{{ applicant.mobile }}</td>
+                        <td>{{ applicant.dob | date }}</td>
+                        <td>
+                            <a href="#/applicants/{{ applicant.id }}" class="btn btn-default btn-xs" title="View Application">
+                                <span class="fa fa-eye"></span>
+                            </a>
+                            <a href="#/applicants/{{ applicant.id }}/edit" title="Edit Application" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span></a>
+                            <a ng-click="removeApplicant($index, applicant.id)" title="Delete Application" class="btn btn-danger btn-xs">
+                                <span class="fa fa-trash-o"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

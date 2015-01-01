@@ -1,0 +1,142 @@
+<div id="createEditApplication">
+    <div class="col-sm-12 header">
+        <h1>Applicant <span class="text-info">{{ applicant.firstName }}</span> Info</h1>
+    </div>
+    <form class="form-horizontal" name="createEditForm" novalidate ng-submit="addEditApplicant(formData)">
+
+        <div class="col-sm-6">
+
+            <div class="form-group">
+                <label for="appId" class="col-sm-4 control-label">Application Id</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.appId }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="salutation" class="col-sm-4 control-label">Salutation</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.salutation }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstName" class="col-sm-4 control-label">First Name</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.firstName }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="lastName" class="col-sm-4 control-label">Last Name</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.lastName }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob" class="col-sm-4 control-label">Date of birth</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.dob | date }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="martialStatus" class="col-sm-4 control-label">Martial Status</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.martialStatus }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="spouce" class="col-sm-4 control-label">Spouce Name</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.spouce }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-4 control-label">Email</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.email }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="work" class="col-sm-4 control-label">Work Phone</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.work }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="col-sm-4 control-label">Cell Phone</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.mobile }}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+
+            <div class="form-group">
+                <label for="dependants" class="col-sm-4 control-label">Dependants</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.dependants }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="language" class="col-sm-4 control-label">Language</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.language }}</p>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="existingClient" class="col-sm-4 control-label">Existing Client</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.existingClient }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="clientId" class="col-sm-4 control-label">Client Id</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.clientId }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="relationWithPrimary" class="col-sm-4 control-label">Relationship with primary applicant</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.relationWithPrimary }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="home" class="col-sm-4 control-label">Home Phone</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.home }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fax" class="col-sm-4 control-label">Fax</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.fax }}</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="contactMethod" class="col-sm-4 control-label">Contact Method</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static">{{ applicant.relationWithPrimary }}</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-4 control-label">First Time Buyer</label>
+                <div class="col-sm-8">
+                    <p class="form-control-static" ng-if="applicant.firstTimeBuyer">Yes</p>
+                    <p class="form-control-static" ng-if="!applicant.firstTimeBuyer">No</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center clearfix col-sm-12 mTop">
+            <a ui-sref="applicants" class="btn btn-primary">All Applicants</a>
+        </div>
+    </form>
+
+</div>
