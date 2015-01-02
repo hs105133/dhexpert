@@ -1,5 +1,5 @@
 (function(){
-	angular.module("expertApp").controller("ListAppCtrl", function($scope, $stateParams, AppService){
+	angular.module("expertApp").controller("ListAppCtrl", function($scope, $stateParams, AppService, ApplicantService){
 		$scope.formData = {};
 
 		var appId  = $stateParams.appId;
@@ -8,6 +8,7 @@
 			AppService.get({id: appId}, function(res){
 				$scope.app = res;
 			});
+			$scope.applicants = ApplicantService.query({appId: appId});
 		} else {
 			$scope.apps = AppService.query();
 		}
@@ -17,6 +18,12 @@
 				$scope.apps.splice(index, 1);
 			});
 		};
+
+		$scope.removeApplicant = function(index, applicantId){
+			ApplicantService.remove({id: applicantId}, function(res){
+				$scope.applicants.splice(index, 1);
+			});
+		};		
 
 	});	
 })();

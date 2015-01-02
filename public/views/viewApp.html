@@ -1,45 +1,80 @@
 <div id="viewApp">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <div class="header">
             <h1>{{ app.id }}</h1>
         </div>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-5">
                 <strong>Application Id</strong>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-7">
                 <p>{{ app.id }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-5">
                 <strong>Application Type</strong>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-7">
                 <p>{{ app.type }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-5">
                 <strong>Purpose</strong>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-7">
                 <p>{{ app.purpose }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-5">
                 <strong>Agent</strong>
             </div>
-            <div class="col-sm-8">
+            <div class="col-md-7">
                 <p>{{ app.agent }}</p>
             </div>
         </div>
         <div class="row mTop">
-            <div class="col-sm-6">
+            <div class="col-md-12">
                 <a class="btn btn-primary" href="#/apps/{{app.id}}/add">Add Applicant</a>
                 <a class="btn btn-link" ui-sref="listapp">Show All Application</a>
             </div>
         </div>
     </div>
+    <div class="col-sm-6">
+        <div class="header">
+            <h1>Registered Applicants</h1>
+        </div>
+            <div class="alert alert-warning text-center" ng-if="!applicants.length">No Applicants!</div>  
+
+         <div class="table-responsive" ng-if="applicants.length">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="applicant in applicants | filter:filterApplicant">
+                        <td>{{ applicant.id }}</td>
+                        <td>{{ applicant.firstName }}</td>
+                        <td>
+                            <a href="#/applicants/{{ applicant.id }}" class="btn btn-default btn-xs" title="View Application">
+                                <span class="fa fa-eye"></span>
+                            </a>
+                            <a href="#/applicants/{{ applicant.id }}/edit" title="Edit Application" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span></a>
+                            <a ng-click="removeApplicant($index, applicant.id)" title="Delete Application" class="btn btn-danger btn-xs">
+                                <span class="fa fa-trash-o"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>       
+    </div>
+
+
 </div>
