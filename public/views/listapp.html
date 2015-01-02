@@ -2,6 +2,14 @@
     <div class="col-sm-12">
         <div class="header">
             <h1>All Application</h1>
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control" placeholder="Search Application" ng-model="filterApp">
+                <span class="input-group-addon">
+                    <button type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
         </div>
         <div class="table-responsive">
             <table class="table">
@@ -15,7 +23,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="app in apps">
+                    <tr ng-repeat="app in apps | filter:filterApp">
                         <td>{{ app.id }}</td>
                         <td>{{ app.type }}</td>
                         <td>{{ app.purpose }}</td>

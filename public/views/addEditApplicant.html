@@ -1,6 +1,9 @@
 <div id="createEditApplication">
     <div class="col-sm-12 header">
-        <h1>Add Applicant to <a href="#/apps/{{appId}}">{{ appId }}</a></h1>
+        <h1>
+        <span ng-if="formData.id">Edit</span>
+        <span ng-if="!formData.id">Add</span> Applicant
+        </h1>
     </div>
     <form class="form-horizontal" name="createEditForm" novalidate ng-submit="addEditApplicant(formData)">
 
@@ -171,7 +174,7 @@
             </div>
         </div>
         <div class="form-group text-center clearfix col-sm-12 mTop">
-            <button type="submit" class="btn btn-primary">Add Applicant</button>
+            <button type="submit" class="btn btn-primary"><span ng-if="!formData.id">Add</span><span ng-if="formData.id">Update</span> Applicant</button>
         </div>
     </form>
 

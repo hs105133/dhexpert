@@ -1,7 +1,16 @@
 <div id="createEditApplication">
     <div class="col-sm-12">
         <div class="header">
-            <h1>Applicants</h1>
+            <h1>Applicants
+            </h1>
+            <div class="input-group stylish-input-group">
+                <input type="text" class="form-control" placeholder="Search Applicant" ng-model="filterApplicant">
+                <span class="input-group-addon">
+                    <button type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
         </div>
         <div class="table-responsive">
             <table class="table">
@@ -16,7 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="applicant in applicants">
+                    <tr ng-repeat="applicant in applicants | filter:filterApplicant">
                         <td>{{ applicant.appId }}</td>
                         <td>{{ applicant.firstName }}</td>
                         <td>{{ applicant.email }}</td>
